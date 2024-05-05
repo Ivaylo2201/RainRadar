@@ -16,7 +16,7 @@ function CurrentForecast({ data }) {
                 {date.weekday}, {date.day} {date.month}
                 </div>
             <div className='text-2xl font-bold font-comfortaa text-lightblue-100'>
-                {today.temp.toFixed(0)}°
+                {today.temp}°
             </div>
         </div>
     )

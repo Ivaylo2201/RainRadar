@@ -1,7 +1,9 @@
 import {
     Wind, CloudRainWind, Snowflake, CloudFog,
-    Cloud, CloudMoon, CloudSun, Sun, Moon,
-    CloudLightning, CloudSunRain, CloudMoonRain
+    Cloudy, Cloud, CloudMoon, CloudSun, Sun, Moon,
+    CloudLightning, CloudSunRain, CloudMoonRain,
+    Gauge, Droplets, Sunrise, Sunset, ThermometerSnowflake,
+    ThermometerSun, Eye
 } from "lucide-react"
 
 export function getIcon(conditions) {
@@ -12,7 +14,7 @@ export function getIcon(conditions) {
         'wind': Wind,
         'rain': CloudRainWind,
         'fog': CloudFog,
-        'cloudy': Cloud,
+        'cloudy': Cloudy,
         'partly-cloudy-day': CloudSun,
         'partly-cloudy-night': CloudMoon,
         'clear-day': Sun,
@@ -21,7 +23,17 @@ export function getIcon(conditions) {
         'thunder-showers-day': CloudLightning,
         'thunder-showers-night': CloudLightning,
         'showers-day': CloudSunRain,
-        'showers-night': CloudMoonRain
+        'showers-night': CloudMoonRain,
+        'windspeed': Wind,
+        'cloudcover': Cloud,
+        'pressure': Gauge,
+        'humidity': Droplets,
+        'sunrise': Sunrise,
+        'sunset': Sunset,
+        'tempmin': ThermometerSnowflake,
+        'tempmax': ThermometerSun,
+        'visibility': Eye,
+        'snow': Snowflake
     }
 
     return icons[conditions];

@@ -9,11 +9,11 @@ export default {
                 'blue-300': '#1a5a92',
                 'blue-400': '#032242',
                 'lightblue-100': '#bbdefb',
-            }
+            },
         },
         fontFamily: {
             montserrat: ['Montserrat', 'sans-serif'],
-            comfortaa: ['Comfortaa', 'sans-serif']
+            comfortaa: ['Comfortaa', 'sans-serif'],
         },
     },
     plugins: [],
