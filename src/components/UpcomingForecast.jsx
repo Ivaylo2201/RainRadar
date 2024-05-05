@@ -9,7 +9,7 @@ function UpcomingForecast({ data }) {
     }))
 
     return (
-        <div className="w-11/12 h-64 bg-blue-400 flex justify-evenly items-center rounded-xl">
+        <div className="w-full h-64 flex justify-evenly items-center rounded-xl">
             {days.map((day, i) => (
                 <UpcomingCard key={i}
                     timestamp={day.timestamp}
