@@ -4,7 +4,7 @@ function Timeline({ data }) {
     const LIMIT = 6;
     const now = new Date().getHours();
     const todayHours = data.days[0].hours;
-    let hours = todayHours.slice(now);
+    let hours = todayHours.slice(now, LIMIT);
 
     if (hours.length < LIMIT) {
         const futureHours = data.days[1].hours;

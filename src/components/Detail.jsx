@@ -2,7 +2,7 @@ import { getIcon } from '../helpers/icons.js';
 
 function Detail({ data }) {
     const units = {
-        'windspeed': ' m/s',
+        'windspeed': ' km/h',
         'cloudcover': '%',
         'pressure': ' hPa',
         'humidity': '%',

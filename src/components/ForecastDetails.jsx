@@ -3,7 +3,7 @@ import Detail from "./Detail";
 function ForecastDetails({ data }) {
     const today = data.days[0];
     const details = [
-        ['windspeed', today.windspeed],
+        ['windspeed', today.windspeed.toFixed(0)],
         ['humidity', today.humidity.toFixed(0)],
         ['pressure', today.pressure.toFixed(0)],
         ['visibility', today.visibility.toFixed(0)],
@@ -14,7 +14,7 @@ function ForecastDetails({ data }) {
     ]
 
     return (
-        <div className='w-full h-2/5 flex justify-center flex-wrap content-center gap-5'>
+        <div className='w-full h-2/5 flex justify-center flex-wrap content-center gap-5 mt-5'>
             {details.map((detail, i) => (
                 <Detail
                     key={i}

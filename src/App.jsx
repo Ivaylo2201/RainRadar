@@ -11,9 +11,9 @@ function App() {
 
     useEffect(() => {
         async function fetchData() {
-            await new Promise(resolve => setTimeout(resolve, 550));
+            await new Promise(resolve => setTimeout(resolve, 450));
             const data = await fetch(
-                'https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/Sofia/next7days?unitGroup=metric&include=days%2Chours&key=Q8NFGDZ7BX4LYUKXQX295NSMS&contentType=json'
+                'https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/Varna/next7days?unitGroup=metric&include=days%2Chours&key=Q8NFGDZ7BX4LYUKXQX295NSMS&contentType=json'
             );
             setForecast(await data.json());
         }
@@ -28,12 +28,12 @@ function App() {
             <div className='w-full h-16 bg-green-400 mb-7 flex justify-center items-center'>
                 Search box here
             </div>
-            <div className='w-full h-5/6 flex flex-col justify-between items-center  '>
+            <div className='w-full h-5/6 flex flex-col justify-between items-center'>
                 <div className='w-[85%] h-[55%] flex'>
                     <div className='w-1/5 h-full'>
                         <CurrentForecast data={forecast} />
                     </div>
-                    <div className='w-4/5 h-full flex flex-col justify-evenly ml-10'>
+                    <div className='w-4/5 h-full flex flex-col justify-evenly ml-10 mt-2'>
                         <ForecastDetails data={forecast} />
                         <Timeline data={forecast} />
                     </div>
